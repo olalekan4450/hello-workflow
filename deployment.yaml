@@ -1,26 +1,28 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-name: temporal-worker
+  name: temporal-worker
 spec:
-replicas: 1
-selector:
-matchLabels:
-app: temporal-worker
-template:
-metadata:
-labels:
-app: temporal-worker
-spec:
-containers:
-- name: temporal-worker
-image: 726332013048.dkr.ecr.us-east-1.amazonaws.com/temporal-worker:latest
-resources:
-limits:
-cpu: 100m
-memory: 128Mi
-ports:
-- containerPort: 8080
-env:
-- name: GOPATH
-value: /app
+  replicas: 1
+  selector:
+    matchLabels:
+      app: temporal-worker
+  template:
+    metadata:
+      labels:
+        app: temporal-worker
+    spec:
+      containers:
+      - name: temporal-worker
+        image: temporal-worker:latest
+        imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            cpu: 100m
+            memory: 128Mi
+        ports:
+        - containerPort: 8080
+        env:
+        - name: GOPATH
+          value: /app
+      restartPolicy: Always
