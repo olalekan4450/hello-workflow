@@ -18,10 +18,18 @@ At Wafi, we use [Temporal](https://temporal.io) as a microservice orchestrator w
 
 * Package this temporal app as a docker image
   * write a CICD for the app.
+The CI/CD for this application has been created with github action
+
   * deploy the app using Kubernetes
+Application was first dockerized then deployed to kubernetes
+
   * How would you improve this app?
 
-
+To improve the app, you can consider the following:
+- Adding monitoring and logging to the app to track performance and detect errors.
+- Implementing backup and disaster recovery strategies to ensure data availability and minimize downtime.
+- Adding scalability to the app to handle increased traffic and load.
+- Improving security by implementing access controls, encryption, and other security measures.
 
 This is required for the worker to be up
 
