@@ -18,10 +18,10 @@ At Wafi, we use [Temporal](https://temporal.io) as a microservice orchestrator w
 
 * Package this temporal app as a docker image
   * write a CICD for the app.
-  #### Answer:  The CI/CD for this application has been created with github action
+#### Answer:  The CI/CD for this application has been created with github action
 
   * deploy the app using Kubernetes
- #### Answer: Application was first dockerized then deployed to kubernetes
+#### Answer: Application was first dockerized then deployed to kubernetes
 
   * How would you improve this app?
 
